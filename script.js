@@ -46,15 +46,16 @@ toggleSwitch.addEventListener('change', () => {
 });
 
 document.getElementById("viewCvBtn").addEventListener("click", function () {
-const cvContainer = document.getElementById("cvContainer");
+  const cvContainer = document.getElementById("cvContainer");
 
-if (cvContainer.style.display ===  "block") {
-  cvContainer.style.display = "none";
-  this.textContent = "📥 View CV"; 
-} 
-else {
-cvContainer.style.display = "block";
-this.textContent = "❌ Hide CV"; 
-}
+  if (cvContainer.style.display === "block") {
+    cvContainer.style.display = "none";
+    this.textContent = "📥 View CV";
+  }
+  else {
+    cvContainer.style.display = "block";
+    this.textContent = "❌ Hide CV";
+  }
+
 
 });
