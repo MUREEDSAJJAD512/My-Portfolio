@@ -5,301 +5,329 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mureed Portfolio</title>
+  <!-- Bootstrap & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- ======= Sidebar ======= -->
-  <header id="header">
-    <div class="theme-switch-wrapper text-center">
-      <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round">
-          <span class="sun">🌞</span>
-          <span class="moon">🌙</span>
+  <!-- ======= Header / Sidebar ======= -->
+  <header id="header" class="fixed-top">
+    <nav id="navbar" class="navbar-menu w-100">
+
+      <!-- row number 1 -->
+      <div class="header-top-row d-flex align-items-center justify-content-between px-3 py-2">
+
+        <!-- 1. Profile Image -->
+        <img src="img.jpg" alt="Mureed Sajjad" class="profile-img-mobile">
+
+        <!-- 2. Color Button -->
+        <div class="color-picker-wrapper mt-4 px-3">
+          <button id="themSlider" class="btn btn-primary btn-sm">Theme</button>
         </div>
-      </label>
-    </div>
-    <div class="d-flex flex-column align-items-center text-center">
-      <img src="img.jpg" alt="Profile" class="img-fluid rounded-circle" width="100">
-      <h3 class="text-light mt-3">
-        <a href="CV WEB.MS.pdf.pdf" title="My CV View">Mureed Sajjad M S</a>
-      </h3>
 
-      <br>
-      <div class="social-links">
-        <!-- ✅ WhatsApp -->
-        <a href="https://wa.me/923437543272?text=Assalam%20U%20Alaikum%20Mureed%20Sajjad%20M%20S" target="_blank"
-          title="WhatsApp">
-          <i class="bi bi-whatsapp"></i>
-        </a>
-        <!-- ✅ Facebook -->
-        <a href=" https://www.facebook.com/share/1AYfbW2opP/" target="_blank" title="facebook">
-          <i class="bi bi-facebook"></i>
-        </a>
+        <!-- 3. Name Area -->
+        <div class="name-area-mobile">
+          <h3 class="m-0 name-title"><a href="CV WEB.MS..pdf">Mureed Sajjad M S</a></h3>
+        </div>
 
-        <!-- ✅ Instagram -->
-        <a href="https://www.instagram.com/mureed_sajjad_m_s_/" target="_blank" title="instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
-
-        <!-- ✅ LinkedIn -->
-        <a href="https://www.linkedin.com/in/mureed-sajjad-b5aba7257/" target="_blank" title="linkedin">
-          <i class="bi bi-linkedin"></i>
-        </a>
+        <!-- 4. Mobile Nav Toggle Icon -->
+        <i class="bi bi-list mobile-nav-toggle "></i>
       </div>
-      <nav class="nav flex-column mt-4">
-        <a href="#hero" class="nav-link scrollto"><i class="bi bi-house-door"></i> Home</a>
-        <a href="#about" class="nav-link scrollto"><i class="bi bi-person"></i> About</a>
-        <a href="#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> Resume</a>
-        <a href="#internship" class="nav-link scrollto"><i class="bi bi-mortarboard"></i> Internship</a>
-        <a href="#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> Contact</a>
-      </nav>
-    </div>
+
+      <!-- row number 2 -->
+
+      <!-- 5. Navigation link rpw me hogy -->
+      <div id="mobile-menu-wrapper" class="main-nav">
+        <ul class="nav-links-row">
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house-door"></i><span>Home</span></a>
+          </li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person"></i><span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i><span>Resume</span></a></li>
+          <li><a href="#internship" class="nav-link scrollto"><i
+                class="bi bi-mortarboard"></i><span>Internship</span></a>
+          </li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bi bi-briefcase"></i><span>Portfolio</span></a>
+          </li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i><span>Contact</span></a></li>
+        </ul>
+
+      </div>
+    </nav>
   </header>
 
-  <!-- ======= Home Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center text-center">
-    <div class="hero-container">
-      <h1>Mureed Sajjad M S</h1>
-      <p>I'm a <span class="typed">Web Developer, Student, Computer Software</span></p>
-    </div>
-  </section>
+  <!-- ======= Main Content Area ======= -->
+  <main id="main">
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="section-title">
-        <h2>About</h2>
-        <p class="first-p">
-          I am a hardworking and talented individual with experience in data entry and a deep interest in App And web
-          development.
-          My data entry experience has enhanced my accuracy, speed, and problem-solving skills.
-          I am also pursuing a web development course where I am learning HTML, CSS, JavaScript, and modern frameworks.
-          My goal is to bring positive change through technology and create useful solutions.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= Personal Information Section ======= -->
-
-  <section id="personal-info" class="personal-info">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-          <img src=" FB_IMG_1733121616831.jpg" class="img-fluid rounded" alt="Mureed Photo">
+    <!-- ======= Home Section ======= -->
+    <section id="hero" class="hero-section d-flex align-items-center">
+      <div class="container text-center">
+        <div class="hero-content">
+          <h1>Mureed Sajjad M S</h1>
+          <p>I'm a <span class="typed">Developer</span></p>
         </div>
-        <div class="col-lg-8 pt-4 pt-lg-0">
-          <h2>Personal Information</h2>
-          <br>
-          <div class="row">
-            <div class="col-lg-6">
+      </div>
+    </section>
+    <span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span
+      class="box"></span>
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-padding py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>About</h2>
+          <p class="mt-3">
+            I am a hardworking and talented individual with experience in data entry and a deep interest in App and Web
+            development.
+            My goal is to bring positive change through technology and create useful solutions.
+          </p>
+        </div>
+
+        <!-- Personal Info Detail -->
+        <div id="personal-info" class="row align-items-center mt-4">
+          <div class="col-lg-4 text-center">
+            <img src="Mureed Sajjad About.jpg" class="img-fluid rounded shadow" alt="Mureed Photo">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0">
+            <h3>Personal Information</h3>
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <ul class="list-unstyled info-list">
+                  <li><strong>Father Name:</strong> Ijaz Hussain</li>
+                  <li><strong>Birthday:</strong> 05 May 2002</li>
+                  <!-- <li><strong>Age:</strong> 24</li> -->
+                  <li><strong>Phone:</strong> <a href="tel:+923437543272">+92 3437543272</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled info-list">
+                  <li><strong>Email:</strong> <a href="mailto:mureedsajjadms@gmail.com">mureedsajjadms@gmail.com</a>
+                  </li>
+                  <li><strong>Address:</strong> Lahore, Pakistan</li>
+                  <li><strong>Freelance:</strong> Available</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume section-padding py-5 bg-light">
+      <div class="container">
+        <div class="section-title mb-4">
+          <h2>Resume</h2>
+        </div>
+
+        <div class="row">
+
+          <!-- Education Column -->
+
+          <div class="col-lg-6">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item mb-4">
+              <h4>Graduate — Bachelor of Arts</h4>
+              <h5>2022 - 2025</h5>
+              <p><em>Allama Iqbal Open University</em></p>
+            </div>
+            <div class="resume-item mb-4">
+              <h4>Intermediate — FA (IT)</h4>
+              <h5>2018 - 2020</h5>
+              <p><em>Govt Associate College Behal (Bhakkar)</em></p>
+              <a href="Document PDF/Intermediate .pdf" class="btn btn-sm btn-outline-primary">View Results Card</a>
+            </div>
+
+            <div class="resume-item mb-4">
+              <h4>Matric — (Science)</h4>
+              <h5>2016 - 2018</h5>
+              <p><em>Govt High School Yousaf Shah (Bhakkar)</em></p>
+              <a href="Document PDF/Matric Results Card.pdf" class="btn btn-sm btn-outline-primary">View Results
+                Card</a>
+            </div>
+          </div>
+
+          <!-- Experience & Skills Column -->
+          <div class="col-lg-6">
+            <h3 class="resume-title">Experience</h3>
+            <div class="resume-item mb-3">
               <ul>
-                <li><strong>Father Name:</strong> <span>Ijaz Hussain</span></li>
-                <li><strong>Birthday:</strong> <span>05 May 2000</span></li>
-                <li><strong>Age:</strong> <span>24</span></li>
-                <li><strong>Phone:</strong> <span><a href="tel:+923437543272">+92 3437543272</a></span></li>
+                <li>MS Office (Excel, Word, Power Point) - 1 Year</li>
+                <li>Digital Marketing - 2 Years</li>
+                <li>Data Entry Operator - 1 Year</li>
+                <li>Cashier - less 1 Year</li>
               </ul>
             </div>
-            <div class="col-lg-6">
+
+            <h3 class="resume-title">Documents & CV</h3>
+            <div class="resume-item">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <a href="CV WEB.MS.pdf.pdf" download class="btn btn-primary">Download CV</a>
+                <button id="viewCvBtn" class="btn btn-secondary">View CV</button>
+              </div>
+              <div id="cvContainer" class="mt-2" style="display:none;">
+                <iframe src="CV WEB.MS..pdf" width="100%" height="400px"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Internship Section ======= -->
+    <section id="internship" class="internship py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>Internship</h2>
+          <p>My Technical Training Journey</p>
+        </div>
+
+        <div class="institute-box p-4 mb-4 text-center bg-white shadow-sm">
+          <h4><strong>Web Development</strong></h4>
+          <p>Institute: <em>National Vocational and Technical Training Commission (NAVTTC)</em></p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card skill-card h-100 p-3">
+              <h5><i class="bi bi-laptop me-2"></i>Frontend</h5>
               <ul>
-                <li><strong>Email:</strong> <span><a
-                      href="mailto:mureedsajjadms@gmail.com">mureedsajjadms@gmail.com</a></span></li>
-                <li><strong>Address:</strong> <span>House No 7A, A Block, Nawab Town,Thokar Niaz Baig, Lahore</span>
-                </li>
-                <li><strong>Freelance:</strong> <span>Available</span></li>
+                <li>HTML, CSS</li>
+                <li>JavaScript, React.js</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card skill-card h-100 p-3">
+              <h5><i class="bi bi-gear me-2"></i>Backend</h5>
+              <ul>
+                <li>Node.js</li>
+                <li>Express.js</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="card skill-card h-100 p-3">
+              <h5><i class="bi bi-database me-2"></i>Database</h5>
+              <ul>
+                <li>MySQL</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ======= Resume Section ======= -->
-  <section id="resume" class="resume">
-    <div class="container">
-      <div class="section-title">
-        <h2>Resume</h2>
-      </div>
-
-      <h3 class="mb-3">Education</h3>
-      <div class="resume-item">
-        <h4>Graduate — Bachelor of Arts</h4>
-        <h5>2022 - 2025</h5>
-        <p><em>Allama Iqbal Open University</em></p>
-      </div>
-      <br>
-      <div class="resume-item">
-        <h4>Intermediate — FA (IT)</h4>
-        <h5>2018 - 2020</h5>
-        <p><em>Govt Associate College Behal (Bhakkar)</em><br>Board: BISE Sargodha</p>
-        <a href="Document PDF/Intermediate .pdf">🧾 View Results Card</a>
-      </div>
-      <br>
-      <div class="resume-item">
-        <h4>Matric — Science Group</h4>
-        <h5>2016 - 2018</h5>
-        <p><em>Govt High School Yousaf Shah (Bhakkar)</em><br>Board: BISE Sargodha</p>
-        <a href="Document PDF/Matric Results Card.pdf">🧾 View Results Card</a>
-      </div> <br>
-      <div class="resume-item">
-        <h4>Other Documents</h4>
-        <a href="Document PDF/Character certificate Intermediate.pdf">🧾 View Character Certificate Intermediate</a>
-        <br>
-        <a href="Document PDF/character certificate Matric .pdf">🧾 View Character Certificare Matric </a>
-        <br>
-        <a href="Document PDF/Domicile Bhakkar.pdf">🧾 View Domicile</a>
-        <br>
-        <br>
-
-        <button id="viewCvBtn" class="cv-btn">📥 View CV</button>
-        <a href="CV WEB.MS.pdf.pdf" download class="cv-btn">⏬ download CV</a>
-        <div id="cvContainer">
-          <iframe src="CV WEB.MS.pdf.pdf"></iframe>
-        </div>
-
-        <h3 class="mt-4">Experience</h3>
-        <div class="resume-item">
-          <ol>
-            <li>
-              <h5>MS Office. ( Excel,Word, Power Point etc)
-                Experience 1Year</h5>
-            </li>
-            <li>
-              <h5> Digital Marketing
-                Experience 2 Year</h5>
-            </li>
-            <li>
-              <h5> Data Entry Operator
-                Experience 1 Year </h5>
-            </li>
-          </ol>
-        </div>
-        <h3 class="mt-4">Skills</h3>
-
-        <div class="resume-item">
-          <ol>
-            <li>
-              <h5>
-                Web Portfoilo
-              </h5>
-            </li>
-            <li>
-              <h5>
-                Web Page Design
-              </h5>
-            </li>
-          </ol>
-        </div>
-      </div>
-  </section>
-
-  <section id="internship" class="internship">
-    <div class="container">
-      <h2 class="mt-4">Internship</h2>
-      <h5>WEB Development </h5>
-      <h5><strong>(Institute)</strong> <br> <em>Vocational and Technical Training Commission (NAVTTC)</em> </h5>
-      <div class="col-lg-4">
-        <h5>Frontend</h5>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React.js</li>
-        </ul>
-      </div>
-      <div class="col-lg-4">
-        <h5>Backend</h5>
-        <ul>
-          <li>Node.js</li>
-          <li>Express.js</li>
-        </ul>
-      </div>
-      <div class="col-lg-4">
-        <h5>Database</h5>
-        <ul>
-          <li>MySQL</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section id="portfoilo" class="portfoilo">
-    <div class="container">
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My recent projects</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="portfolio-item">
-            <a href="Calculator/index.html" target="_blank">
-              <img src="calculator.png" class="img-fluid rounded" alt="">
-              <h5 class="mt-2"> Calculator </h5>
-            </a>
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio py-5 bg-light">
+      <div class="container">
+        <div class="section-title d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h2>Portfolio</h2>
+            <p>My recent projects</p>
           </div>
+          <a href="https://github.com/MUREEDSAJJAD512/My-Portfolio" target="_blank" class="btn btn-dark">
+            <i class="bi bi-github"></i> See My Code
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="portfolio-item">
-            <a href="Page club/index.html" target="_blank">
-              <img src="keyboard typing.png" class="img-fluid rounded" alt="">
-              <h5 class="mt-2">Typing Club Home Page </h5>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="portfolio-item">
-            <a href="Login and Singup/index1.html" target="_blank">
-              <img src="login page.png" class="img-fluid rounded" alt="">
-              <h5 class="mt-2">Login and Singup Page </h5>
-            </a>
 
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item card">
+              <a href="Calculator/index.html" target="_blank">
+                <img src="calculator.png" class="card-img-top" alt="Calculator">
+                <div class="card-body text-center">
+                  <h5>Calculator</h5>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item card">
+              <a href="Page club/index.html" target="_blank">
+                <img src="keyboard typing.png" class="card-img-top" alt="Typing Club">
+                <div class="card-body text-center">
+                  <h5>Typing Club</h5>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item card">
+              <a href="Login and Singup/index1.html" target="_blank">
+                <img src="login page.png" class="card-img-top" alt="Login Page">
+                <div class="card-body text-center">
+                  <h5>Login & Signup</h5>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="info">
-            <p><i class="bi bi-geo-alt"></i><a href="https://maps.app.goo.gl/j85nGzCouFSK7caF7">Lahore, Pakistan</a>
-            </p>
-            <p><i class="bi bi-envelope"></i><a href="mailto:mureedsajjadms@gmail.com">mureedsajjadms@gmail.com</a>
-            </p>
-            <p><i class="bi bi-phone"></i><a href="tel:+923437543272">+92 3437543272</a></p>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact py-5">
+      <div class="container">
+        <div class="section-title mb-4">
+          <h2>Contact</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="info-box p-4 shadow-sm bg-white">
+              <p><i class="bi bi-geo-alt"></i>
+                <a href="https://maps.app.goo.gl/p4PA584BYa8cYL2F8" target="_blank">Lahore, Pakistan</a>
+              </p>
+              <p><i class="bi bi-envelope"></i> <a href="mailto:mureedsajjadms@gmail.com">mureedsajjadms@gmail.com</a>
+              </p>
+              <p><i class="bi bi-phone"></i> <a href="tel:+923437543272">+92 3437543272</a></p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form p-4 shadow-sm bg-white">
+              <input type="hidden" name="access_key" value="YOUR-KEY-HERE">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+              </div>
+              <div class="mb-3">
+                <textarea name="message" rows="5" class="form-control" placeholder="Message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="col-lg-6">
-          <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form">
-            <input type="hidden" name="access_key" value="c3fe8bcf-6797-4c6a-94e4-2b0e073d4fc1">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <textarea name="message" rows="5" placeholder="Message" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+  </main>
 
-        </div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="py-4 text-center">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Mureed Sajjad</span></strong>. All Rights Reserved
       </div>
     </div>
-  </section>
+  </footer>
 
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- JS Files -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>

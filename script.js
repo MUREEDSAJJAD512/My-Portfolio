@@ -1,61 +1,123 @@
-// Smooth scroll
-document.querySelectorAll('.scrollto').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
-
-    // active class update
-    document.querySelectorAll('.scrollto').forEach(el => el.classList.remove('active'));
-    this.classList.add('active');
-  });
+/**
+ * 1. MOUSE SPOTLIGHT GLOW EFFECT
+ * Har waqt mouse ki position track karke background gradient update karta hai.
+ */
+document.addEventListener('mousemove', (e) => {
+    document.body.style.setProperty('--x', e.clientX + 'px');
+    document.body.style.setProperty('--y', e.clientY + 'px');
 });
 
-// Typing effect
-let typedText = document.querySelector('.typed');
-if (typedText) {
-  let texts = ["Web Developer", "Computer Software Engineer", "Student"];
-  let index = 0, charIndex = 0, currentText = '', isDeleting = false;
+// Glow effect ka div body mein add karna
+const glowDiv = document.createElement('div');
+glowDiv.classList.add('mouse-glow');
+document.body.appendChild(glowDiv);
 
-  function type() {
-    if (index >= texts.length) index = 0;
-    currentText = texts[index];
 
-    typedText.textContent = currentText.substring(0, charIndex);
+/**
+ * 2. 7-COLOR THEME SWITCHER (Cycling)
+ * Button click karne par 1 se 7 tak colors change honge.
+ */
+let currentColor = 1;
+const body = document.body;
 
-    if (!isDeleting && charIndex < currentText.length) {
-      charIndex++;
-      setTimeout(type, 100);
-    } else if (isDeleting && charIndex > 0) {
-      charIndex--;
-      setTimeout(type, 60);
-    } else {
-      isDeleting = !isDeleting;
-      if (!isDeleting) index++;
-      setTimeout(type, 1000);
-    }
-  }
+// Button create karna ya purane slider ki jagah click event lagana
+const themeBtn = document.getElementById('themSlider'); // Aapne HTML mein slider rakha hai, hum use button ki tarah treat kar sakte hain
 
-  type();
+if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+        // Purani class remove karna
+        body.classList.remove(`theme-${currentColor}`);
+
+        // Agla rang select karna
+        currentColor = currentColor >= 7 ? 1 : currentColor + 1;
+
+        // Nayi class add karna
+        body.classList.add(`theme-${currentColor}`);
+
+        // LocalStorage mein save karna taake refresh par rang na badle
+        localStorage.setItem('selectedTheme', currentColor);
+    });
 }
 
-const toggleSwitch = document.querySelector('#checkbox');
-
-toggleSwitch.addEventListener('change', () => {
-  document.body.classList.toggle('dark-mode');
+// Page load hote hi purana rang wapas lana
+window.addEventListener('load', () => {
+    const savedTheme = localStorage.getItem('selectedTheme');
+    if (savedTheme) {
+        currentColor = parseInt(savedTheme);
+        body.classList.add(`theme-${currentColor}`);
+    } else {
+        body.classList.add('theme-2'); // Default Blue
+    }
 });
 
-document.getElementById("viewCvBtn").addEventListener("click", function () {
-  const cvContainer = document.getElementById("cvContainer");
 
-  if (cvContainer.style.display === "block") {
-    cvContainer.style.display = "none";
-    this.textContent = "📥 View CV";
-  }
-  else {
-    cvContainer.style.display = "block";
-    this.textContent = "❌ Hide CV";
-  }
+/**
+ * 3. SCROLLSPY (Active Menu Highlight)
+ * Scroll karte waqt batata hai ke aap kis section par hain.
+ */
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
 
+window.addEventListener('scroll', () => {
+    let current = "";
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
 
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+        }
+    });
 });
+
+
+/* 4. MOBILE MENU TOGGLE */
+
+const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const mainNav = document.getElementById('mobile-menu-wrapper');
+
+if (mobileNavToggle) {
+    mobileNavToggle.addEventListener('click', function () {
+        // menu ko toggle karna
+        mainNav.classList.toggle('show-menu');
+
+        // icon change karna list sy X icon 
+        this.classList.toggle('bi-list');
+        this.classList.toggle('bi-x');
+
+    });
+}
+
+// menu ke link per click karty ni menu bund ho jaye 
+const navLinksMobile = document.querySelectorAll('.nav-link');
+navLinksMobile.forEach(link => {
+    link.addEventListener('click', () => {
+        mainNav.classList.remove('show-menu');
+        mobileNavToggle.classList.add('bi-list');
+        mobileNavToggle.classList.remove('bi-x');
+    });
+});
+
+/**
+ * 5. VIEW CV FUNCTIONALITY
+ */
+const viewCvBtn = document.getElementById('viewCvBtn');
+const cvContainer = document.getElementById('cvContainer');
+
+if (viewCvBtn) {
+    viewCvBtn.addEventListener('click', () => {
+        if (cvContainer.style.display === "none") {
+            cvContainer.style.display = "block";
+            viewCvBtn.innerText = "Hide CV";
+        } else {
+            cvContainer.style.display = "none";
+            viewCvBtn.innerText = "View CV";
+        }
+    });
+}

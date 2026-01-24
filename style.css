@@ -1,417 +1,393 @@
- /* Body color variables */
- :root {
-   --bg-color: #ffffff;
-   --text-color: #000000;
-   --header-bg: #f4f4f4;
-   --link-color: #007bff;
-   --h3-color: red;
-   --info-bg: #fff3e0;
-   --info-text: #0d47a1;
-   --from-bg: #fff3e0;
-   --from-text: #e65100;
-   --info-link: #1565c0;
-   --info-link-hover: #0d47a1;
- }
-
- body.dark-mode {
-   --bg-color: black;
-   --text-color: #f0f0f0;
-   --header-bg: #ff00a2;
-   --link-color: #00ffb7;
-   background: #121212;
-   --h3-color: rgb(0, 255, 8);
-   --info-bg: #e65100;
-   --info-text: white;
-   --from-bg: #e65100;
-   --from-text: white;
-   --info-link: #3415fa;
-   --info-link-hover: #f60400;
- }
-
- body.dark-mode .hero-container {
-   background-image: url(daniel-eliashevskyi-aTg26S0_OC0-unsplash.jpg);
- }
-
- /* Sidebar style    ..1... */
- #header {
-   background-color: var(--header-bg);
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 250px;
-   height: 100vh;
-   background: var(--header-bg);
-   color: var(--text-color);
-   padding: 20px;
-   overflow-y: auto;
-   z-index: 1000;
-   text-align: center;
-
- }
-
- #header img {
-   border: 2px solid var(--text-color);
-   margin-bottom: 15px;
- }
-
- #header h1 a {
-   color: var(--text-color);
-   text-decoration: none;
-   font-size: 2.5rem;
-   font-family: 'Times New Roman', Times, serif;
-   font-weight: bold;
- }
-
- #header .nav-link {
-   color: var(--text-color);
-   margin: 10px 0;
-   display: block;
- }
-
- #header .nav-link:hover {
-   color: rgb(44, 2, 254);
-   background-color: var(--text-color);
-   border-radius: 30px;
-   border-color: #f9f9f9;
-   text-transform: lowercase;
- }
-
- .nav-link,
- #header a {
-   color: var(--text-color);
-   text-decoration: none;
- }
-
- .social-links a {
-   color: var(--link-color);
-   font-size: 20px;
-   margin: 0 10px;
-   /* transition: transform 0.3s ease; */
-   display: inline-flex;
-   position: relative;
- }
-
- .social-links a i {
-   color: inherit;
-   transition: transition 0.3s;
- }
-
- .social-links a:hover i {
-   color: #0021f8;
-   transform: scale(1.6);
-   transition: transform 0.3s;
-
- }
-
- body.dark-mode .social-links a:hover {
-   color: #00ffcc;
- }
-
- .theme-switch-wrapper {
-   margin-top: 20px;
- }
-
- .theme-switch {
-   display: inline-block;
-   height: 34px;
-   position: relative;
-   width: 60px;
- }
-
- .theme-switch input {
-   display: none;
- }
-
- .slider {
-   background-color: rgb(250, 250, 250);
-   border-radius: 34px;
-   cursor: pointer;
-   height: 100%;
-   position: relative;
-   transition: 0.2s;
- }
-
- .slider::before {
-   background-color: rgb(230, 165, 165);
-   border-radius: 50%;
-   bottom: 2px;
-   content: "";
-   height: 30px;
-   left: 4px;
-   position: absolute;
-   transition: 0.4s;
-   width: 30px;
-   z-index: 1;
- }
-
-
- /* Dark mode active */
- input:checked+.slider {
-   background-color: black;
- }
-
- input:checked+.slider::before {
-   transform: translateX(26px);
- }
-
- /* Sun and Moon icons inside slider */
- .sun,
- .moon {
-   position: absolute;
-   top: 6px;
-   font-size: 18px;
-   z-index: 2;
- }
-
- .sun {
-   left: 5px;
-   color: white;
- }
-
- .moon {
-   right: 4px;
-   color: #f1c40f;
- }
-
- body {
-   background-color: var(--bg-color);
-   color: var(--text-color);
-   margin-left: 250px;
-
- }
-
-
-
- .hero-container {
-   background-image: url(wallpaperflare.com_wallpaper\ \(3\).jpg);
-   background-size: cover;
-   background-position: center;
-   height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   position: relative;
-   width: 100%;
- }
-
- .hero-container p {
-   font-size: 1rem;
-   color: #0021f8;
- }
-
- .hero-container h1 {
-   font-size: clamp(1.5rem, 10vw, 5rem);
-   font-weight: bold;
-   text-shadow: 3px 3px 10px rgb(251, 0, 255);
-   font-family: 'Times New Roman';
- }
-
- .first-p {
-   max-width: 68ch;
-   margin-inline: auto;
-   padding-inline: 16px;
-   font-size: clamp(16px, 1.8vw, 20px);
-   line-height: 1.9;
-   text-align: justify;
-   text-justify: inter-word;
-   hyphens: auto;
-   letter-spacing: 0.1px;
- }
-
- .personal-info img {
-   max-width: 300px;
-   border-radius: 50%;
-   margin-bottom: 20px;
- }
-
- /* ------------------------------
-   6. Resume Section
------------------------------- */
-
- .cv-btn {
-   padding: 3px 5px;
-
-   color: white;
-   border: none;
-   border-radius: 5px;
-   font-size: 16px;
-   cursor: pointer;
-   transition: 0.3s;
-
-   display: inline-block;
-   margin: 5px;
-   background-color: #007bff;
-   text-decoration: none;
-
- }
-
- .cv-btn:hover {
-   background: #0056b3;
- }
-
- #cvContainer {
-   display: none;
-   margin-top: 20px;
- }
-
- #cvContainer iframe {
-   width: 100%;
-   height: 500px;
-   border: 2px solid blue;
-   border-radius: 18px;
- }
-
- /* ------------------
- Internship Section
-------------------- */
-
-
- /* ------------------------------
-   8. Portfolio Section
------------------------------- */
-
-
- .portfolio-item img {
-   border-radius: 50%;
-   object-fit: cover;
-   width: 200px;
-   height: 200px;
-   display: block;
-   margin: 0 auto;
- }
-
- img {
-   max-width: 100%;
-   height: auto;
- }
-
-
- /* Contact Section */
- .contact {
-   padding: 60px 20px;
-   background: var(--bg-color);
-   color: var(--text-color);
- }
-
- .contact .section-title {
-   text-align: center;
-   margin-bottom: 40px;
- }
-
- /* Info Box */
- .contact .info {
-   background: var(--info-bg);
-   color: var(--info-text);
-   padding: 20px;
-   border-radius: 12px;
-   box-shadow: 0 4px 12px rgba(246, 7, 7, 0.1);
- }
-
- .contact .info p {
-   font-size: 1rem;
-   margin-bottom: 12px;
-   display: flex;
-   align-items: center;
-   color: var(--text-color);
- }
-
- .contact .info i {
-   color: var(--link-color);
-   margin-right: 8px;
-   font-size: 18px;
- }
-
- .contact .info a {
-   color: var(--info-link);
-   text-decoration: none;
-   transition: 0.3s;
- }
-
- .contact .info a:hover {
-   color: var(--link-color);
-   text-decoration: underline;
- }
-
- /* Contact Form */
- .php-email-form {
-   background: var(--from-bg);
-   color: var(--from-text);
-   padding: 25px;
-   border-radius: 12px;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
- }
-
- .php-email-form input,
- .php-email-form textarea {
-   width: 100%;
-   padding: 12px 15px;
-   border: 1px solid #ddd;
-   border-radius: 8px;
-   margin-bottom: 15px;
-   font-size: 15px;
-   background: var(--bg-color);
-   color: var(--text-color);
-   transition: 0.3s;
- }
-
- .php-email-form input:focus,
- .php-email-form textarea:focus {
-   border-color: var(--link-color);
-   outline: none;
-   box-shadow: 0 0 6px rgba(81, 0, 255, 0.4);
- }
-
- .php-email-form button {
-   background: var(--link-color);
-   border: none;
-   padding: 12px 25px;
-   color: #fff;
-   border-radius: 8px;
-   font-size: 16px;
-   transition: 0.3s;
-   cursor: pointer;
- }
-
- .php-email-form button:hover {
-   filter: brightness(85%);
- }
-
-
- h2 {
-   color: #0021f8;
- }
-
-
-   /* Mobile pe thoda zyada readable spacing */
-   @media (max-width: 768px) {
-
-     #header {
-       width: 100%;
-       height: auto;
-       position: relative;
-     }
-
-     body {
-       margin-left: 0;
-     }
-
-     .hero-container {
-       height: auto;
-       padding: 60px 20px;
-       text-align: center;
-     }
-
-     .hero-container h1 {
-       font-size: 1.8rem;
-     }
-
-     .hero-container p {
-       font-size: 1rem;
-     }
-
-     .portfolio-item img {
-       width: 150px;
-       height: 150px;
-     }
-   }
+/* ==========================================================
+   1. GLOBAL VARIABLES & THEMES (7 Colors)
+   ========================================================== */
+:root {
+  --bg-dark: #0f172a;
+  --text-main: #94a3b8;
+  --text-bright: #e2e8f0;
+  --primary-color: #38bdf8;
+  /* Default Blue */
+  --card-bg: rgba(30, 41, 59, 0.5);
+  --glow-color: rgba(56, 189, 248, 0.15);
+}
+
+/* Themes Classes */
+body.theme-1 {
+  --primary-color: #ffffff;
+  --glow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* White */
+body.theme-2 {
+  --primary-color: #38bdf8;
+  --glow-color: rgba(56, 189, 248, 0.15);
+}
+
+/* Blue */
+body.theme-3 {
+  --primary-color: #22c55e;
+  --glow-color: rgba(34, 197, 94, 0.15);
+}
+
+/* Green */
+body.theme-4 {
+  --primary-color: #f59e0b;
+  --glow-color: rgba(245, 158, 11, 0.15);
+}
+
+/* Orange */
+body.theme-5 {
+  --primary-color: #a855f7;
+  --glow-color: rgba(168, 85, 247, 0.15);
+}
+
+/* Purple */
+body.theme-6 {
+  --primary-color: #ef4444;
+  --glow-color: rgba(239, 68, 68, 0.15);
+}
+
+/* Red */
+body.theme-7 {
+  --primary-color: #00ffcc;
+  --glow-color: rgba(0, 255, 204, 0.15);
+}
+
+
+h2, h3, .resume-title, .resume-item h4 {
+  color: var(--primary-color) !important;
+}
+
+.btn-primary, btn-outline-primary:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+   color: #000 !important;   /*text dark rahee take nazar aay  */
+}
+
+i {
+  color: var(--primary-color);
+}
+
+.portfolio-item:hover {
+  border-color: var(--primary-color) !important;
+}
+
+/* ==========================================================
+   1. GLOBAL STYLES
+   ========================================================== */
+
+/* Basic Reset */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Mouse Spotlight Effect */
+.mouse-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(600px circle at var(--x) var(--y), var(--glow-color), transparent 80%);
+  z-index: 9999;
+}
+
+/* ==========================================================
+   2. HEADER / SIDEBAR (Left Side)
+   ========================================================== */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: auto !important;
+  width: 300px;
+  background: var(--bg-dark);
+  padding: 30px;
+  z-index: 1000;
+  transition: all 0.5s;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top-row {
+  flex-direction: column;
+}
+
+
+#header::-webkit-scrollbar {
+  width: 5px;
+}
+
+#header::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+/* Profile Section */
+.profile-img-mobile {
+  border-radius: 50%;
+  width: 120px;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-info h3 a {
+  color: var(--text-bright);
+  text-decoration: none;
+}
+
+/* Color Picker Button Style */
+.color-picker-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  order: 2;
+}
+
+#themeBtn {
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Navigation Menu */
+.main-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color);
+}
+
+/* ==========================================================
+   3. MAIN CONTENT AREA
+   ========================================================== */
+#main {
+  margin-left: 300px;
+  /* Sidebar space */
+  padding: 0 50px;
+}
+
+/* Section Common Styling */
+section {
+  padding: 80px 0;
+}
+
+h2 {
+  color: var(--text-bright);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Hero Section */
+.hero-section h1 {
+  font-size: 4rem;
+  color: var(--text-bright);
+  font-weight: 800;
+}
+
+.hero-section span.typed {
+  color: var(--primary-color);
+}
+
+/* ==========================================================
+   4. PORTFOLIO CARDS (Focus & Blur Effect)
+   ========================================================== */
+.portfolio-item {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Blur Effect Logic */
+.portfolio-container:hover .portfolio-item {
+  opacity: 0.4;
+  filter: blur(2px);
+}
+
+.portfolio-container .portfolio-item:hover {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(-10px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================
+   5. MOBILE RESPONSIVE (Header Top)
+   ========================================================== */
+@media (max-width: 1199px) {
+  #header {
+    width: 100%;
+    height: auto;
+    background: var(--bg-dark);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 10px;
+    bottom: auto !important;
+    flex-direction: row !important;
+
+  }
+
+  .header-top-row {
+    display: flex !important;
+    width: 100%;
+    z-index: 2001;
+  }
+
+  /* Profile pic on left, Menu on right */
+  .profile-info {
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .profile-img-mobile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .name-area-mobile {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+
+  /* 2. color btn pic k sat  */
+  .color-picker-wrapper {
+    margin: 0 10px !important;
+    padding: 0 !important;
+    background: none !important;
+    order: 2;
+  }
+
+  /*
+  .social-links, */
+  .color-picker-wrapper p {
+    padding: 5px 10px !important;
+    font-size: 10px;
+    width: auto !important;
+  }
+
+  .name-title {
+    display: block !important;
+    font-size: 14px !important;
+    margin: 0 auto !important;
+    order: 3;
+    white-space: nowrap;
+  }
+
+  /* 3. name ccenter me aayega */
+  .profile-info h3 {
+    display: block !important;
+    font-size: 16px !important;
+    margin: 0 auto !important;
+    order: 3;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  /* 4. 3 line icon   */
+  .mobile-nav-toggle {
+    font-size: 28px;
+    color: var(--primary-color);
+    cursor: pointer;
+    order: 4;
+  }
+
+  /* navigation manu jo click karny per niche aay ga  */
+  .main-nav {
+    display: none !important;
+    background: rgba(15, 23, 42, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    overflow: auto;
+  }
+
+  /* menu items ko ik lime me dakhna hy  */
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* click per show hogi */
+  .main-nav.show-menu {
+    display: block !important;
+  }
+
+  .nav-links-row {
+    display: flex;
+    flex-direction: row !important;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    gap: 15px;
+  }
+
+  .nav-links-row li a {
+    white-space: nowrap;
+    /*text next line ni jay ga */
+    font-size: 14px;
+    color: var(--text-main);
+    text-decoration: none;
+  }
+
+  /* main content jo header ko nechy chup raha thaa  */
+  #main {
+    margin-left: 0 !important;
+    padding: 20px;
+    margin-top: 90px !important;
+
+  }
+
+  .hero-section {
+    padding-top: 40px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
