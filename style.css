@@ -7,14 +7,15 @@
   --text-bright: #e2e8f0;
   --primary-color: #38bdf8;
   /* Default Blue */
-  --card-bg: rgba(30, 41, 59, 0.5);
+  --card-bg: rgba(30, 41, 59, 0.5) ;
+  backdrop-filter: blur(10px);
   --glow-color: rgba(56, 189, 248, 0.15);
 }
 
 /* Themes Classes */
 body.theme-1 {
-  --primary-color: #ffffff;
-  --glow-color: rgba(255, 255, 255, 0.1);
+  --primary-color:#00d2ff;
+  --glow-color: rgba(0, 210, 255, 0.1);
 }
 
 /* White */
@@ -58,7 +59,7 @@ h2, h3, .resume-title, .resume-item h4 {
   color: var(--primary-color) !important;
 }
 
-.btn-primary, btn-outline-primary:hover {
+.btn-primary, .btn-outline-primary:hover {
   background-color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
    color: #000 !important;   /*text dark rahee take nazar aay  */
@@ -83,6 +84,7 @@ body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
+transition: background-color 0.5s ease, color 0.5s ease;  
 }
 
 /* Mouse Spotlight Effect */
@@ -160,7 +162,7 @@ body {
   order: 2;
 }
 
-#themeBtn {
+#themmSlider {
   background: var(--primary-color);
   color: #000;
   border: none;
@@ -171,10 +173,12 @@ body {
 }
 
 /* Navigation Menu */
-.main-nav {
+.header-bottom-row {
   list-style: none;
   padding: 0;
-}
+} 
+
+.mobile-nav-toggle
 
 .nav-link {
   color: var(--text-main);
@@ -217,7 +221,7 @@ h2 {
 
 /* Hero Section */
 .hero-section h1 {
-  font-size: 4rem;
+  font-size: clamp (2rem, 8vw, 4rem);
   color: var(--text-bright);
   font-weight: 800;
 }
@@ -267,6 +271,7 @@ h2 {
   }
 
   .header-top-row {
+    flex-direction: row;
     display: flex !important;
     width: 100%;
     z-index: 2001;
@@ -336,10 +341,11 @@ h2 {
     color: var(--primary-color);
     cursor: pointer;
     order: 4;
+    display: block !important;
   }
 
   /* navigation manu jo click karny per niche aay ga  */
-  .main-nav {
+  .header-bottom-row {
     display: none !important;
     background: rgba(15, 23, 42, 0.95);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -348,13 +354,13 @@ h2 {
   }
 
   /* menu items ko ik lime me dakhna hy  */
-  .main-nav ul {
+  .header-bottom-row ul {
     display: flex;
     flex-direction: column;
   }
 
   /* click per show hogi */
-  .main-nav.show-menu {
+  .header-bottom-row.show-menu {
     display: block !important;
   }
 
