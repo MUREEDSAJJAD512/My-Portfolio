@@ -21,7 +21,7 @@ let currentColor = 1;
 const body = document.body;
 
 // Button create karna ya purane slider ki jagah click event lagana
-const themeBtn = document.getElementById('themSlider'); // Aapne HTML mein slider rakha hai, hum use button ki tarah treat kar sakte hain
+const themeBtn = document.getElementById('themSlider'); // html me is name wala button ki tarah treat kar sakte hain
 
 if (themeBtn) {
     themeBtn.addEventListener('click', () => {
@@ -39,6 +39,7 @@ if (themeBtn) {
     });
 }
 
+
 // Page load hote hi purana rang wapas lana
 window.addEventListener('load', () => {
     const savedTheme = localStorage.getItem('selectedTheme');
@@ -46,7 +47,7 @@ window.addEventListener('load', () => {
         currentColor = parseInt(savedTheme);
         body.classList.add(`theme-${currentColor}`);
     } else {
-        body.classList.add('theme-2'); // Default Blue
+        body.classList.add('theme-1'); // Default Blue
     }
 });
 

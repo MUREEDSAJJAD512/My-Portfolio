@@ -2,67 +2,101 @@
    1. GLOBAL VARIABLES & THEMES (7 Colors)
    ========================================================== */
 :root {
-  --bg-dark: #0f172a;
+  --bg-body: #0f172a;
+  --bg-header: #0f172a;
   --text-main: #94a3b8;
   --text-bright: #e2e8f0;
   --primary-color: #38bdf8;
-  /* Default Blue */
-  --card-bg: rgba(30, 41, 59, 0.5) ;
+  --card-bg: rgba(30, 41, 59, 0.5);
   backdrop-filter: blur(10px);
   --glow-color: rgba(56, 189, 248, 0.15);
 }
 
-/* Themes Classes */
+/* white */
 body.theme-1 {
-  --primary-color:#00d2ff;
-  --glow-color: rgba(0, 210, 255, 0.1);
+  --bg-body: #ffffff;
+  --bg-header: #ffffff;
+  --text-main: #000000;
+  --text-bright: #000000;
+  --primary-color: #514e4e;
+  --glow-color: rgba(43, 31, 31, 0.195);
 }
 
-/* White */
+/* red */
 body.theme-2 {
-  --primary-color: #38bdf8;
-  --glow-color: rgba(56, 189, 248, 0.15);
+  --bg-body: #7f1d1d;
+  --bg-header: #991b1b;
+  --text-main: #f6f6fb;
+  --text-bright: #98fb03;
+  --primary-color: #2503ff;
+  --glow-color: rgba(94, 31, 220, 0.15);
 }
 
-/* Blue */
+/* purple */
 body.theme-3 {
-  --primary-color: #22c55e;
-  --glow-color: rgba(34, 197, 94, 0.15);
+  --bg-body: #2e1065;
+  --bg-header: #3b0764;
+  --text-main: #e9d5ff;
+  --text-bright: #ffffff;
+  --primary-color: #c084fc;
+  --glow-color: rgba(85, 208, 28, 0.15);
 }
 
 /* Green */
 body.theme-4 {
-  --primary-color: #f59e0b;
+  --bg-body: Green;
+  --bg-header: #14532d;
+  --text-main: #dcfce7;
+  --text-bright: #780707;
+  --primary-color: #4ade80;
   --glow-color: rgba(245, 158, 11, 0.15);
 }
 
-/* Orange */
+/* Blue*/
 body.theme-5 {
-  --primary-color: #a855f7;
-  --glow-color: rgba(168, 85, 247, 0.15);
+  --bg-body: #020617;
+  --bg-header: #020617;
+  --text-main: #e0f2fe;
+  --text-bright: #ffffff;
+  --primary-color: #38bdf8;
+  --glow-color: rgba(143, 24, 255, 0.186);
 }
 
-/* Purple */
+/* Golgen */
 body.theme-6 {
-  --primary-color: #ef4444;
-  --glow-color: rgba(239, 68, 68, 0.15);
+  --bg-body: gold;
+  --bg-header: #bf9b24;
+  --text-main: rgb(0, 0, 0);
+  --text-bright: #fa0101;
+  --primary-color: #068cf9;
+  --glow-color: rgba(8, 4, 2, 0.242);
 }
 
-/* Red */
+/* Black */
 body.theme-7 {
-  --primary-color: #00ffcc;
+  --bg-body: #000000;
+  --bg-header: #111010;
+  --text-main: white;
+  --text-bright: #ffffff;
+  --primary-color: #ffffff;
   --glow-color: rgba(0, 255, 204, 0.15);
 }
 
 
-h2, h3, .resume-title, .resume-item h4 {
-  color: var(--primary-color) !important;
-}
+/* h2,
+h3,
+.resume-title,
+.resume-item h4 {
+  color: var(--text-bright) !important;
+} */
 
-.btn-primary, .btn-outline-primary:hover {
+.btn-primary,
+.btn-outline-primary:hover {
   background-color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
-   color: #000 !important;   /*text dark rahee take nazar aay  */
+  color: #000000 !important;
+  /* text-shadow: ; */
+  /*text dark rahee take nazar aay  */
 }
 
 i {
@@ -79,12 +113,12 @@ i {
 
 /* Basic Reset */
 body {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-body);
   color: var(--text-main);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
-transition: background-color 0.5s ease, color 0.5s ease;  
+  transition: all 0.4s ease;
 }
 
 /* Mouse Spotlight Effect */
@@ -95,7 +129,7 @@ transition: background-color 0.5s ease, color 0.5s ease;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: radial-gradient(600px circle at var(--x) var(--y), var(--glow-color), transparent 80%);
+  background: radial-gradient(500px circle at var(--x) var(--y), var(--glow-color), transparent 80%);
   z-index: 9999;
 }
 
@@ -108,10 +142,10 @@ transition: background-color 0.5s ease, color 0.5s ease;
   left: 0;
   bottom: auto !important;
   width: 300px;
-  background: var(--bg-dark);
+  background: var(--bg-header);
   padding: 30px;
   z-index: 1000;
-  transition: transform o.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   border-right: 1px solid rgba(255, 255, 255, 0.05);
   overflow-y: auto;
   scrollbar-width: thin;
@@ -119,7 +153,7 @@ transition: background-color 0.5s ease, color 0.5s ease;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
 }
 
 .header-top-row {
@@ -139,8 +173,9 @@ transition: background-color 0.5s ease, color 0.5s ease;
 .profile-img-mobile {
   border-radius: 50%;
   width: 120px;
-  border: 5px solid rgba(255, 255, 255, 0.1);
+  border: 3px solid rgb(245, 227, 227);
   transition: 0.3s;
+
 }
 
 .profile-info {
@@ -152,6 +187,11 @@ transition: background-color 0.5s ease, color 0.5s ease;
 .profile-info h3 a {
   color: var(--text-bright);
   text-decoration: none;
+}
+
+.name-area-mobile {
+  text-transform: uppercase;
+  text-shadow: 1px 1px #f59e0b;
 }
 
 /* Color Picker Button Style */
@@ -177,7 +217,7 @@ transition: background-color 0.5s ease, color 0.5s ease;
 .header-bottom-row {
   list-style: none;
   padding: 0;
-} 
+}
 
 .mobile-nav-toggle {
   display: none;
@@ -200,6 +240,7 @@ transition: background-color 0.5s ease, color 0.5s ease;
 .nav-link:hover,
 .nav-link.active {
   color: var(--primary-color);
+
 }
 
 /* ==========================================================
@@ -213,6 +254,7 @@ transition: background-color 0.5s ease, color 0.5s ease;
 
 /* Section Common Styling */
 section {
+  scroll-margin-top: 100px;
   padding: 80px 0;
 }
 
@@ -224,7 +266,7 @@ h2 {
 
 /* Hero Section */
 .hero-section h1 {
-  font-size: clamp (2rem, 8vw, 4rem);
+  font-size: clamp(2rem, 8vw, 4rem);
   color: var(--text-bright);
   font-weight: 800;
 }
@@ -265,19 +307,18 @@ h2 {
   #header {
     width: 100%;
     height: auto;
-    background: var(--bg-dark);
+    background: var(--bg-header);
     border-bottom: 2px solid var(--primary-color);
     padding: 10px;
     bottom: auto !important;
     flex-direction: row !important;
-
   }
 
   .header-top-row {
     flex-direction: row;
     display: flex !important;
     width: 100%;
-    z-index: 2001;
+    
   }
 
   /* Profile pic on left, Menu on right */
@@ -293,13 +334,13 @@ h2 {
 
 
   .profile-img-mobile {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    /* height: 30px; */
     border-radius: 50%;
   }
 
   .name-area-mobile {
-    font-size: 16px;
+  
     white-space: nowrap;
   }
 
@@ -340,20 +381,25 @@ h2 {
 
   /* 4. 3 line icon   */
   .mobile-nav-toggle {
+    display: block;
     font-size: 28px;
     color: var(--primary-color);
     cursor: pointer;
     order: 4;
-    display: block !important;
+    z-index: 2005;
   }
 
   /* navigation manu jo click karny per niche aay ga  */
   .header-bottom-row {
-    display: none !important;
-    background: rgba(15, 23, 42, 0.95);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-95px);
+    transition: all 0.5s ease;
+    background: var(--card-bg);
+    /* border-top: 1px solid rgba(255, 255, 255, 0.05); */
     width: 100%;
-    overflow: auto;
+    border-radius: 10px 10px 0 0;
   }
 
   /* menu items ko ik lime me dakhna hy  */
@@ -364,7 +410,9 @@ h2 {
 
   /* click per show hogi */
   .header-bottom-row.show-menu {
-    display: block !important;
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .nav-links-row {
@@ -378,10 +426,15 @@ h2 {
 
   .nav-links-row li a {
     white-space: nowrap;
-    /*text next line ni jay ga */
     font-size: 14px;
     color: var(--text-main);
     text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links-row li a:hover {
+    transform: translateY(-3px) scale(1.2);
+    color: var(--primary-color);
   }
 
   /* main content jo header ko nechy chup raha thaa  */
@@ -390,6 +443,22 @@ h2 {
     padding: 20px;
     margin-top: 90px !important;
 
+  }
+
+  #section-indicator {
+    position: fixed;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+    background: var(--bg-header);
+    color: var(--primary-color);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 3000;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
   }
 
   .hero-section {
