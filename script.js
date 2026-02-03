@@ -52,6 +52,8 @@ window.addEventListener('load', () => {
 });
 
 
+
+
 /**
  * 3. SCROLLSPY (Active Menu Highlight)
  * Scroll karte waqt batata hai ke aap kis section par hain.
@@ -82,12 +84,14 @@ window.addEventListener('scroll', () => {
 
 const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 const mainNav = document.getElementById('mobile-menu-wrapper');
+const mainArea = document.getElementById('main');
 
 if (mobileNavToggle) {
     mobileNavToggle.addEventListener('click', function () {
         // menu ko toggle karna
         mainNav.classList.toggle('show-menu');
 
+mainArea.classList.toggle('main-pushed');
         // icon change karna list sy X icon 
         this.classList.toggle('bi-list');
         this.classList.toggle('bi-x');

@@ -18,7 +18,7 @@ body.theme-1 {
   --bg-header: #ffffff;
   --text-main: #000000;
   --text-bright: #000000;
-  --primary-color: #514e4e;
+  --primary-color: #050303;
   --glow-color: rgba(43, 31, 31, 0.195);
 }
 
@@ -83,29 +83,44 @@ body.theme-7 {
 }
 
 
-/* h2,
-h3,
-.resume-title,
-.resume-item h4 {
-  color: var(--text-bright) !important;
-} */
-
 .btn-primary,
+.btn-outline-primary {
+  background-color: var(--bg-body) !important;
+  border: 3px solid var(--text-bright) !important;
+  color: var(--text-bright) !important;
+  transition: all 0.5s ease;
+  border-radius: 9px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* :hover */
+.btn-primary:hover,
 .btn-outline-primary:hover {
-  background-color: var(--primary-color) !important;
-  border-color: var(--primary-color) !important;
-  color: #000000 !important;
-  /* text-shadow: ; */
-  /*text dark rahee take nazar aay  */
+  background-color: var(--text-bright) !important;
+  color: var(--bg-body) !important;
+  border-color: var(--bg-body);
 }
 
-i {
-  color: var(--primary-color);
+
+.btn-primary i,
+.btn-outline-primary i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
 }
 
+.btn-primary:hover i,
+.btn-outline-primary:hover i {
+  transform: translateX(4px);
+}
+
+/* 
 .portfolio-item:hover {
   border-color: var(--primary-color) !important;
-}
+} */
 
 /* ==========================================================
    1. GLOBAL STYLES
@@ -279,8 +294,8 @@ h2 {
    4. PORTFOLIO CARDS (Focus & Blur Effect)
    ========================================================== */
 .portfolio-item {
-  background: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-body);
+  border: 5px solid rgba(255, 255, 255, 0.1);
   transition: all 0.4s ease;
   border-radius: 12px;
   overflow: hidden;
@@ -312,13 +327,14 @@ h2 {
     padding: 10px;
     bottom: auto !important;
     flex-direction: row !important;
+    transition: all 0.4s ease-in-out;
   }
 
   .header-top-row {
     flex-direction: row;
     display: flex !important;
     width: 100%;
-    
+
   }
 
   /* Profile pic on left, Menu on right */
@@ -334,13 +350,13 @@ h2 {
 
 
   .profile-img-mobile {
-    width: 30px;
-    /* height: 30px; */
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
   }
 
   .name-area-mobile {
-  
+
     white-space: nowrap;
   }
 
@@ -382,10 +398,10 @@ h2 {
   /* 4. 3 line icon   */
   .mobile-nav-toggle {
     display: block;
-    font-size: 28px;
+    font-size: 48px;
     color: var(--primary-color);
     cursor: pointer;
-    order: 4;
+    order: 3;
     z-index: 2005;
   }
 
@@ -394,10 +410,8 @@ h2 {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transform: translateY(-95px);
-    transition: all 0.5s ease;
+    transition: all 0.4 ease;
     background: var(--card-bg);
-    /* border-top: 1px solid rgba(255, 255, 255, 0.05); */
     width: 100%;
     border-radius: 10px 10px 0 0;
   }
@@ -410,9 +424,9 @@ h2 {
 
   /* click per show hogi */
   .header-bottom-row.show-menu {
-    max-height: 400px;
+    max-height: 500px;
     opacity: 1;
-    transform: translateY(0);
+    padding-top: 10px;
   }
 
   .nav-links-row {
@@ -441,9 +455,14 @@ h2 {
   #main {
     margin-left: 0 !important;
     padding: 20px;
-    margin-top: 90px !important;
-
+    margin-top: 70px !important;
+    transition: margin-top 0.4s ease-in-out;
   }
+
+  .main-pushed {
+    margin-top: 160px !important;
+  }
+
 
   #section-indicator {
     position: fixed;
